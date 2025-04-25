@@ -1,0 +1,11 @@
+# 參考 https://github.com/timeplus-io/proton/blob/develop/examples/ecommerce/docker-compose.yml
+# 參考 https://github.com/timeplus-io/proton/blob/develop/examples/ecommerce/etl.sql
+
+services:
+  proton:
+    ports:
+      - 8123:8123
+    image: d.timeplus.com/timeplus-io/proton:latest
+    volumes:
+      - ./data:/var/lib/proton
+    restart: always
